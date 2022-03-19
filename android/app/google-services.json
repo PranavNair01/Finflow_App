@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "499681809439",
+    "firebase_url": "https://nodemcu-test-28d25-default-rtdb.firebaseio.com",
+    "project_id": "nodemcu-test-28d25",
+    "storage_bucket": "nodemcu-test-28d25.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499681809439:android:e37ce97ce3dfffb449712a",
+        "android_client_info": {
+          "package_name": "com.example.finflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499681809439-2amfmr89in6bakvll00ru8nh7iifakbb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACaX7p0q-l28GWM1kHtEAEGqufraOnmzc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499681809439-2amfmr89in6bakvll00ru8nh7iifakbb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
