@@ -1,0 +1,290 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.finflow"
+4    android:versionCode="4001"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="31" />
+9-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:23:5-67
+11-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:23:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:24:5-79
+12-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:24:22-76
+13    <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
+13-->[com.google.firebase:firebase-iid:21.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/d0f01ff34f6d818a3748639226f680c3/jetified-firebase-iid-21.1.0/AndroidManifest.xml:24:5-68
+13-->[com.google.firebase:firebase-iid:21.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/d0f01ff34f6d818a3748639226f680c3/jetified-firebase-iid-21.1.0/AndroidManifest.xml:24:22-65
+14    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+14-->[com.google.firebase:firebase-iid:21.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/d0f01ff34f6d818a3748639226f680c3/jetified-firebase-iid-21.1.0/AndroidManifest.xml:26:5-82
+14-->[com.google.firebase:firebase-iid:21.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/d0f01ff34f6d818a3748639226f680c3/jetified-firebase-iid-21.1.0/AndroidManifest.xml:26:22-79
+15
+16    <application
+17        android:name="android.app.Application"
+17-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:5:9-42
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.6.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/14b93615368c2249f1830e26ca064ab5/core-1.6.0/AndroidManifest.xml:24:18-86
+19        android:extractNativeLibs="false"
+20        android:icon="@mipmap/ic_launcher"
+20-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:6:9-43
+21        android:label="Finflow" >
+21-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:4:9-32
+22        <activity
+22-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:7:9-27:20
+23            android:name="com.example.finflow.MainActivity"
+23-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:8:13-41
+24            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+24-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:12:13-163
+25            android:exported="true"
+25-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:9:13-36
+26            android:hardwareAccelerated="true"
+26-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:13:13-47
+27            android:launchMode="singleTop"
+27-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:10:13-43
+28            android:theme="@style/LaunchTheme"
+28-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:11:13-47
+29            android:windowSoftInputMode="adjustResize" >
+29-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:14:13-55
+30
+31            <!--
+32                 Specifies an Android theme to apply to this Activity as soon as
+33                 the Android process has started. This theme is visible to the user
+34                 while the Flutter UI initializes. After that, this theme continues
+35                 to determine the Window background behind the Flutter UI.
+36            -->
+37            <meta-data
+37-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:19:13-22:17
+38                android:name="io.flutter.embedding.android.NormalTheme"
+38-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:20:15-70
+39                android:resource="@style/NormalTheme" />
+39-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:21:15-52
+40
+41            <intent-filter>
+41-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:23:13-26:29
+42                <action android:name="android.intent.action.MAIN" />
+42-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:24:17-68
+42-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:24:25-66
+43
+44                <category android:name="android.intent.category.LAUNCHER" />
+44-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:25:17-76
+44-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:25:27-74
+45            </intent-filter>
+46        </activity>
+47        <!--
+48             Don't delete the meta-data below.
+49             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+50        -->
+51        <meta-data
+51-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:30:9-32:33
+52            android:name="flutterEmbedding"
+52-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:31:13-44
+53            android:value="2" />
+53-->/home/pranav/AndroidStudioProjects/finflow/android/app/src/main/AndroidManifest.xml:32:13-30
+54
+55        <service
+55-->[:cloud_functions] /home/pranav/AndroidStudioProjects/finflow/build/cloud_functions/intermediates/library_manifest/release/AndroidManifest.xml:8:9-12:19
+56            android:name="com.google.firebase.components.ComponentDiscoveryService"
+56-->[:cloud_functions] /home/pranav/AndroidStudioProjects/finflow/build/cloud_functions/intermediates/library_manifest/release/AndroidManifest.xml:8:18-89
+57            android:directBootAware="true"
+57-->[com.google.firebase:firebase-common:20.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:35:13-43
+58            android:exported="false" >
+58-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:66:13-37
+59            <meta-data
+59-->[:cloud_functions] /home/pranav/AndroidStudioProjects/finflow/build/cloud_functions/intermediates/library_manifest/release/AndroidManifest.xml:9:13-11:85
+60                android:name="com.google.firebase.components:io.flutter.plugins.firebase.functions.FlutterFirebaseAppRegistrar"
+60-->[:cloud_functions] /home/pranav/AndroidStudioProjects/finflow/build/cloud_functions/intermediates/library_manifest/release/AndroidManifest.xml:10:17-128
+61                android:value="com.google.firebase.components.ComponentRegistrar" />
+61-->[:cloud_functions] /home/pranav/AndroidStudioProjects/finflow/build/cloud_functions/intermediates/library_manifest/release/AndroidManifest.xml:11:17-82
+62            <meta-data
+62-->[:firebase_auth] /home/pranav/AndroidStudioProjects/finflow/build/firebase_auth/intermediates/library_manifest/release/AndroidManifest.xml:9:13-11:85
+63                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+63-->[:firebase_auth] /home/pranav/AndroidStudioProjects/finflow/build/firebase_auth/intermediates/library_manifest/release/AndroidManifest.xml:10:17-124
+64                android:value="com.google.firebase.components.ComponentRegistrar" />
+64-->[:firebase_auth] /home/pranav/AndroidStudioProjects/finflow/build/firebase_auth/intermediates/library_manifest/release/AndroidManifest.xml:11:17-82
+65            <meta-data
+65-->[:firebase_database] /home/pranav/AndroidStudioProjects/finflow/build/firebase_database/intermediates/library_manifest/release/AndroidManifest.xml:9:13-11:85
+66                android:name="com.google.firebase.components:io.flutter.plugins.firebase.database.FlutterFirebaseAppRegistrar"
+66-->[:firebase_database] /home/pranav/AndroidStudioProjects/finflow/build/firebase_database/intermediates/library_manifest/release/AndroidManifest.xml:10:17-127
+67                android:value="com.google.firebase.components.ComponentRegistrar" />
+67-->[:firebase_database] /home/pranav/AndroidStudioProjects/finflow/build/firebase_database/intermediates/library_manifest/release/AndroidManifest.xml:11:17-82
+68            <meta-data
+68-->[:firebase_storage] /home/pranav/AndroidStudioProjects/finflow/build/firebase_storage/intermediates/library_manifest/release/AndroidManifest.xml:9:13-11:85
+69                android:name="com.google.firebase.components:io.flutter.plugins.firebase.storage.FlutterFirebaseAppRegistrar"
+69-->[:firebase_storage] /home/pranav/AndroidStudioProjects/finflow/build/firebase_storage/intermediates/library_manifest/release/AndroidManifest.xml:10:17-126
+70                android:value="com.google.firebase.components.ComponentRegistrar" />
+70-->[:firebase_storage] /home/pranav/AndroidStudioProjects/finflow/build/firebase_storage/intermediates/library_manifest/release/AndroidManifest.xml:11:17-82
+71            <meta-data
+71-->[:cloud_firestore] /home/pranav/AndroidStudioProjects/finflow/build/cloud_firestore/intermediates/library_manifest/release/AndroidManifest.xml:9:13-11:85
+72                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+72-->[:cloud_firestore] /home/pranav/AndroidStudioProjects/finflow/build/cloud_firestore/intermediates/library_manifest/release/AndroidManifest.xml:10:17-134
+73                android:value="com.google.firebase.components.ComponentRegistrar" />
+73-->[:cloud_firestore] /home/pranav/AndroidStudioProjects/finflow/build/cloud_firestore/intermediates/library_manifest/release/AndroidManifest.xml:11:17-82
+74            <meta-data
+74-->[:firebase_core] /home/pranav/AndroidStudioProjects/finflow/build/firebase_core/intermediates/library_manifest/release/AndroidManifest.xml:9:13-11:85
+75                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+75-->[:firebase_core] /home/pranav/AndroidStudioProjects/finflow/build/firebase_core/intermediates/library_manifest/release/AndroidManifest.xml:10:17-124
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[:firebase_core] /home/pranav/AndroidStudioProjects/finflow/build/firebase_core/intermediates/library_manifest/release/AndroidManifest.xml:11:17-82
+77            <meta-data
+77-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:67:13-69:85
+78                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+78-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:68:17-109
+79                android:value="com.google.firebase.components.ComponentRegistrar" />
+79-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:69:17-82
+80            <meta-data
+80-->[com.google.firebase:firebase-firestore:24.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/8123d9b95e838ead3ef24f5d7df1b3ec/jetified-firebase-firestore-24.0.2/AndroidManifest.xml:20:13-22:85
+81                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+81-->[com.google.firebase:firebase-firestore:24.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/8123d9b95e838ead3ef24f5d7df1b3ec/jetified-firebase-firestore-24.0.2/AndroidManifest.xml:21:17-111
+82                android:value="com.google.firebase.components.ComponentRegistrar" />
+82-->[com.google.firebase:firebase-firestore:24.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/8123d9b95e838ead3ef24f5d7df1b3ec/jetified-firebase-firestore-24.0.2/AndroidManifest.xml:22:17-82
+83            <meta-data
+83-->[com.google.firebase:firebase-database:20.0.4] /home/pranav/.gradle/caches/transforms-2/files-2.1/3aaec8cccfc1e6786d61a6bda7fb7f75/jetified-firebase-database-20.0.4/AndroidManifest.xml:32:13-34:85
+84                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+84-->[com.google.firebase:firebase-database:20.0.4] /home/pranav/.gradle/caches/transforms-2/files-2.1/3aaec8cccfc1e6786d61a6bda7fb7f75/jetified-firebase-database-20.0.4/AndroidManifest.xml:33:17-109
+85                android:value="com.google.firebase.components.ComponentRegistrar" />
+85-->[com.google.firebase:firebase-database:20.0.4] /home/pranav/.gradle/caches/transforms-2/files-2.1/3aaec8cccfc1e6786d61a6bda7fb7f75/jetified-firebase-database-20.0.4/AndroidManifest.xml:34:17-82
+86            <meta-data
+86-->[com.google.firebase:firebase-storage:20.0.1] /home/pranav/.gradle/caches/transforms-2/files-2.1/a732609d39140ed999dd3f02f1a8340e/jetified-firebase-storage-20.0.1/AndroidManifest.xml:33:13-35:85
+87                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+87-->[com.google.firebase:firebase-storage:20.0.1] /home/pranav/.gradle/caches/transforms-2/files-2.1/a732609d39140ed999dd3f02f1a8340e/jetified-firebase-storage-20.0.1/AndroidManifest.xml:34:17-107
+88                android:value="com.google.firebase.components.ComponentRegistrar" />
+88-->[com.google.firebase:firebase-storage:20.0.1] /home/pranav/.gradle/caches/transforms-2/files-2.1/a732609d39140ed999dd3f02f1a8340e/jetified-firebase-storage-20.0.1/AndroidManifest.xml:35:17-82
+89            <meta-data
+89-->[com.google.firebase:firebase-functions:20.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/069df0f8db78012a9a53c94f56190c9f/jetified-firebase-functions-20.0.2/AndroidManifest.xml:18:13-20:85
+90                android:name="com.google.firebase.components:com.google.firebase.functions.FunctionsRegistrar"
+90-->[com.google.firebase:firebase-functions:20.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/069df0f8db78012a9a53c94f56190c9f/jetified-firebase-functions-20.0.2/AndroidManifest.xml:19:17-111
+91                android:value="com.google.firebase.components.ComponentRegistrar" />
+91-->[com.google.firebase:firebase-functions:20.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/069df0f8db78012a9a53c94f56190c9f/jetified-firebase-functions-20.0.2/AndroidManifest.xml:20:17-82
+92            <meta-data
+92-->[com.google.firebase:firebase-iid:21.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/d0f01ff34f6d818a3748639226f680c3/jetified-firebase-iid-21.1.0/AndroidManifest.xml:32:13-34:85
+93                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+93-->[com.google.firebase:firebase-iid:21.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/d0f01ff34f6d818a3748639226f680c3/jetified-firebase-iid-21.1.0/AndroidManifest.xml:33:17-96
+94                android:value="com.google.firebase.components.ComponentRegistrar" />
+94-->[com.google.firebase:firebase-iid:21.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/d0f01ff34f6d818a3748639226f680c3/jetified-firebase-iid-21.1.0/AndroidManifest.xml:34:17-82
+95            <meta-data
+95-->[com.google.firebase:firebase-installations:17.0.1] /home/pranav/.gradle/caches/transforms-2/files-2.1/5c0bcaf225cb7771e65a14163b1c7474/jetified-firebase-installations-17.0.1/AndroidManifest.xml:18:13-20:85
+96                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+96-->[com.google.firebase:firebase-installations:17.0.1] /home/pranav/.gradle/caches/transforms-2/files-2.1/5c0bcaf225cb7771e65a14163b1c7474/jetified-firebase-installations-17.0.1/AndroidManifest.xml:19:17-127
+97                android:value="com.google.firebase.components.ComponentRegistrar" />
+97-->[com.google.firebase:firebase-installations:17.0.1] /home/pranav/.gradle/caches/transforms-2/files-2.1/5c0bcaf225cb7771e65a14163b1c7474/jetified-firebase-installations-17.0.1/AndroidManifest.xml:20:17-82
+98        </service>
+99
+100        <uses-library
+100-->[androidx.window:window:1.0.0-beta04] /home/pranav/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+101            android:name="androidx.window.extensions"
+101-->[androidx.window:window:1.0.0-beta04] /home/pranav/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+102            android:required="false" />
+102-->[androidx.window:window:1.0.0-beta04] /home/pranav/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+103        <uses-library
+103-->[androidx.window:window:1.0.0-beta04] /home/pranav/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+104            android:name="androidx.window.sidecar"
+104-->[androidx.window:window:1.0.0-beta04] /home/pranav/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+105            android:required="false" />
+105-->[androidx.window:window:1.0.0-beta04] /home/pranav/.gradle/caches/transforms-2/files-2.1/cea45e25bbe77c9713c39e234ccfd7bd/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+106
+107        <activity
+107-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:27:9-44:20
+108            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+108-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:28:13-80
+109            android:excludeFromRecents="true"
+109-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:29:13-46
+110            android:exported="true"
+110-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:30:13-36
+111            android:launchMode="singleTask"
+111-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:31:13-44
+112            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+112-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:32:13-72
+113            <intent-filter>
+113-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:33:13-43:29
+114                <action android:name="android.intent.action.VIEW" />
+114-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:34:17-69
+114-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:34:25-66
+115
+116                <category android:name="android.intent.category.DEFAULT" />
+116-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:36:17-76
+116-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:36:27-73
+117                <category android:name="android.intent.category.BROWSABLE" />
+117-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:37:17-78
+117-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:37:27-75
+118
+119                <data
+119-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:39:17-42:51
+120                    android:host="firebase.auth"
+120-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:40:21-49
+121                    android:path="/"
+121-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:41:21-37
+122                    android:scheme="genericidp" />
+122-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:42:21-48
+123            </intent-filter>
+124        </activity>
+125        <activity
+125-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:45:9-62:20
+126            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+126-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:46:13-79
+127            android:excludeFromRecents="true"
+127-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:47:13-46
+128            android:exported="true"
+128-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:48:13-36
+129            android:launchMode="singleTask"
+129-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:49:13-44
+130            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+130-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:50:13-72
+131            <intent-filter>
+131-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:51:13-61:29
+132                <action android:name="android.intent.action.VIEW" />
+132-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:34:17-69
+132-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:34:25-66
+133
+134                <category android:name="android.intent.category.DEFAULT" />
+134-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:36:17-76
+134-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:36:27-73
+135                <category android:name="android.intent.category.BROWSABLE" />
+135-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:37:17-78
+135-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:37:27-75
+136
+137                <data
+137-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:39:17-42:51
+138                    android:host="firebase.auth"
+138-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:40:21-49
+139                    android:path="/"
+139-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:41:21-37
+140                    android:scheme="recaptcha" />
+140-->[com.google.firebase:firebase-auth:21.0.2] /home/pranav/.gradle/caches/transforms-2/files-2.1/ea9dd2db373322964c942699ea3d16dd/jetified-firebase-auth-21.0.2/AndroidManifest.xml:42:21-48
+141            </intent-filter>
+142        </activity>
+143
+144        <provider
+144-->[com.google.firebase:firebase-common:20.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:26:9-31:39
+145            android:name="com.google.firebase.provider.FirebaseInitProvider"
+145-->[com.google.firebase:firebase-common:20.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:27:13-77
+146            android:authorities="com.example.finflow.firebaseinitprovider"
+146-->[com.google.firebase:firebase-common:20.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:28:13-72
+147            android:directBootAware="true"
+147-->[com.google.firebase:firebase-common:20.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:29:13-43
+148            android:exported="false"
+148-->[com.google.firebase:firebase-common:20.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:30:13-37
+149            android:initOrder="100" />
+149-->[com.google.firebase:firebase-common:20.1.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/b25e52f5739b5665d39d607baa2467f6/jetified-firebase-common-20.1.0/AndroidManifest.xml:31:13-36
+150
+151        <activity
+151-->[com.google.android.gms:play-services-base:18.0.1] /home/pranav/.gradle/caches/transforms-2/files-2.1/1c0769389455a4c14b7a50bc2530cb4a/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+152            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+152-->[com.google.android.gms:play-services-base:18.0.1] /home/pranav/.gradle/caches/transforms-2/files-2.1/1c0769389455a4c14b7a50bc2530cb4a/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+153            android:exported="false"
+153-->[com.google.android.gms:play-services-base:18.0.1] /home/pranav/.gradle/caches/transforms-2/files-2.1/1c0769389455a4c14b7a50bc2530cb4a/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+154            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+154-->[com.google.android.gms:play-services-base:18.0.1] /home/pranav/.gradle/caches/transforms-2/files-2.1/1c0769389455a4c14b7a50bc2530cb4a/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+155
+156        <meta-data
+156-->[com.google.android.gms:play-services-basement:18.0.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/4a1e8147c3db656939cfc830651ce63e/jetified-play-services-basement-18.0.0/AndroidManifest.xml:21:9-23:69
+157            android:name="com.google.android.gms.version"
+157-->[com.google.android.gms:play-services-basement:18.0.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/4a1e8147c3db656939cfc830651ce63e/jetified-play-services-basement-18.0.0/AndroidManifest.xml:22:13-58
+158            android:value="@integer/google_play_services_version" />
+158-->[com.google.android.gms:play-services-basement:18.0.0] /home/pranav/.gradle/caches/transforms-2/files-2.1/4a1e8147c3db656939cfc830651ce63e/jetified-play-services-basement-18.0.0/AndroidManifest.xml:23:13-66
+159    </application>
+160
+161</manifest>
