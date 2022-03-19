@@ -1,6 +1,0 @@
-com/example/finflow/MainActivity.java
- com.example.finflow.MainActivity
-io/flutter/plugins/GeneratedPluginRegistrant.java
- io.flutter.plugins.GeneratedPluginRegistrant
-com/example/finflow/BuildConfig.java
- com.example.finflow.BuildConfig
