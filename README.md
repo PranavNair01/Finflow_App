@@ -13,15 +13,4 @@ Finflow is a smart pond monitoring system where we use sensors and automate volu
 
 #### Instructions to run the app
 
-1. Ensure that you have Dart and Flutter plugins installed on your system.
-2. Clone this repository by running the following command:
-```
-git clone https://github.com/PranavNair01/Finflow_App.git
-```
-3. Run the app via GUI or by running the following commands:
-```
-flutter pub get
-flutter run
-```
-4. Alternatively, install any one of the APKs of the app, and run the app directly.
-[Link to APKs](https://github.com/PranavNair01/Finflow_App/tree/main/build/app/outputs/flutter-apk)
+1. Install any one of the APKs of the app, and run the app directly.
