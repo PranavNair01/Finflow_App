@@ -1,4 +1,5 @@
 import 'package:finflow/screens/otp_page.dart';
+import 'package:finflow/utils/snackbar_message.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -73,7 +74,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       border: InputBorder.none
                     ),
                     onChanged: (val) {
-                      mobileNumber = '+91'+val;
+                      mobileNumber = val;
                       print(mobileNumber);
                     },
                     keyboardType: TextInputType.phone,
@@ -86,7 +87,12 @@ class _SignUpPageState extends State<SignUpPage> {
                   height: MediaQuery.of(context).size.height / 18.45,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, OTPPage.routeName);
+                      if(mobileNumber.length != 10){
+                        ScaffoldMessenger.of(context).showSnackBar(showSnackBar(context, 'Please enter a valid 10 digit mobile number'));
+                      }
+                      else{
+                        Navigator.pushNamed(context, OTPPage.routeName);
+                      }
                     },
                     child: Text(
                       'Next',

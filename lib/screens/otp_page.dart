@@ -2,8 +2,10 @@ import 'dart:async';
 
 import 'package:finflow/screens/home_page.dart';
 import 'package:finflow/screens/signup_page.dart';
+import 'package:finflow/utils/snackbar_message.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class OTPPage extends StatefulWidget {
   static const String routeName = '/otp';
@@ -11,6 +13,10 @@ class OTPPage extends StatefulWidget {
   @override
   State<OTPPage> createState() => _OTPPageState();
 }
+
+String otp = '';
+String correctOtp = 'e-ZT3!3S"Eb?t*dF';
+bool canAuthenticate = false;
 
 class _OTPPageState extends State<OTPPage> {
   
@@ -52,6 +58,9 @@ class _OTPPageState extends State<OTPPage> {
   
   @override
   Widget build(BuildContext context) {
+
+    // loginUser(context);
+
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: MediaQuery.of(context).size.height / 9.22,
@@ -108,10 +117,10 @@ class _OTPPageState extends State<OTPPage> {
                         border: InputBorder.none
                     ),
                     onChanged: (val) {
-
+                      otp = val;
                     },
                     keyboardType: TextInputType.phone,
-                    maxLength: 4,
+                    maxLength: 6,
                   ),
                 ),
                 SizedBox(height: 16,),
@@ -120,7 +129,12 @@ class _OTPPageState extends State<OTPPage> {
                   height: MediaQuery.of(context).size.height / 18.45,
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, HomePage.routeName);
+                      if(otp.length != 6){
+                        ScaffoldMessenger.of(context).showSnackBar(showSnackBar(context, 'Please enter a 6 digit code'));
+                      }
+                      else if(true){
+                        Navigator.pushNamed(context, HomePage.routeName);
+                      }
                     },
                     child: Text(
                       'Next',
@@ -130,14 +144,14 @@ class _OTPPageState extends State<OTPPage> {
                 SizedBox(height: 16,),
                 Text.rich(
                   TextSpan(
-                    text: 'A 4 digit code has been sent to ',
+                    text: 'A 6 digit code has been sent to ',
                     style: TextStyle(
                       fontSize: 14,
                       color: Colors.black45
                     ),
                     children: [
                       TextSpan(
-                        text: mobileNumber,
+                        text: '+91 ' + mobileNumber,
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.black
@@ -156,11 +170,12 @@ class _OTPPageState extends State<OTPPage> {
                           setState(() {
                             _start = 120;
                             isEnabled = false;
+                            // loginUser(context);
                           });
                         }
                       },
                       child: Text(
-                        'Resend OTP',
+                        'Resend Code',
                         style: TextStyle(
                           color: isEnabled ? Color(0xFF23286B) : Colors.black45,
                         ),
@@ -199,4 +214,39 @@ class _OTPPageState extends State<OTPPage> {
       ),
     );
   }
+}
+
+// Function to sign in users using mobile number
+Future<void> loginUser(BuildContext context) async{
+  FirebaseAuth auth = FirebaseAuth.instance;
+
+  await auth.verifyPhoneNumber(
+    phoneNumber: '+91 ' + mobileNumber,
+    timeout: Duration(seconds: 120),
+    // Called when auto detects OTP and is successful
+    verificationCompleted: (PhoneAuthCredential credential) async{
+      await auth.signInWithCredential(credential).then((value) async{
+        Navigator.pushNamed(context, HomePage.routeName);
+      }).catchError((err) {
+        print(err.toString());
+      });
+    },
+    // Called when error
+    verificationFailed: (FirebaseAuthException authException){
+      print(authException.message);
+    },
+    // Called when OTP Code is sent to mobile number
+    codeSent: (String verificationId, int? resendToken) async{
+      canAuthenticate = true;
+      correctOtp = verificationId;
+    },
+    // Called when OTP expires due to timeout
+    codeAutoRetrievalTimeout: (String verificationId){
+      if(auth.currentUser!.uid.isNotEmpty) {
+        print(verificationId);
+        print("Timeout");
+        canAuthenticate = false;
+      }
+    },
+  );
 }

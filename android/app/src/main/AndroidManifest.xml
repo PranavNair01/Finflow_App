@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.finflow">
    <application
-        android:label="finflow"
+        android:label="Finflow"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

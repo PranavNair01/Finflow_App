@@ -43,23 +43,33 @@ class _HomePageState extends State<HomePage> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text.rich(
-                      TextSpan(
-                        text: 'Status: ',
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: Colors.black45,
-                        ),
-                        children: [
+                    Row(
+                      children: [
+                        Text.rich(
                           TextSpan(
-                            text: 'Connected',
+                            text: 'Status: ',
                             style: TextStyle(
                               fontSize: 16,
-                              color: Color(0xFF23286B)
-                            )
+                              color: Colors.black45,
+                            ),
+                            children: [
+                              TextSpan(
+                                text: 'Connected',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  color: Color(0xFF048204)
+                                )
+                              ),
+                            ]
                           )
-                        ]
-                      )
+                        ),
+                        SizedBox(width: 4,),
+                        Icon(
+                          Icons.check_circle_outline,
+                          color: Color(0xFF048204),
+                          size: 12,
+                        )
+                      ],
                     ),
                     Text.rich(
                         TextSpan(
@@ -263,7 +273,7 @@ class _HomePageState extends State<HomePage> {
                             color: Color(0xFFFAEAEA)
                           ),
                           child: Text(
-                            'The solution in a smaller sentence in one line',
+                            'Turn on the aerator',
                             style: TextStyle(
                               color: Color(0xFF970C0C),
                               fontSize: 12
@@ -296,6 +306,7 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               'Dissolved Oxygen',
@@ -304,25 +315,65 @@ class _HomePageState extends State<HomePage> {
                               ),
                             ),
                             SizedBox(height: 4,),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'All Good!',
-                                    style: TextStyle(
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'All Good!',
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    color: Color(0xFF23286B)
+                                  ),
+                                ),
+                                Icon(
+                                  Icons.chevron_right,
+                                  size: 6.67,
+                                  color: Color(0xFF23286B),
+                                )
+                              ],
+                            )
+                          ],
+                        ),
+                      ),
+                    ),
+                    Container(
+                      height: MediaQuery.of(context).size.height / 10.41,
+                      width: MediaQuery.of(context).size.width / 2.30,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(5),
+                        border: Border.all(
+                          color: Color(0xFFD3EAFF),
+                          width: 0.5,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Nitrate',
+                              style: TextStyle(
+                                  fontSize: 16
+                              ),
+                            ),
+                            SizedBox(height: 4,),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'All Good!',
+                                  style: TextStyle(
                                       fontSize: 12,
                                       color: Color(0xFF23286B)
-                                    ),
                                   ),
-                                  Icon(
-                                    Icons.chevron_right,
-                                    size: 6.67,
-                                    color: Color(0xFF23286B),
-                                  )
-                                ],
-                              ),
+                                ),
+                                Icon(
+                                  Icons.chevron_right,
+                                  size: 6.67,
+                                  color: Color(0xFF23286B),
+                                )
+                              ],
                             )
                           ],
                         ),
@@ -341,33 +392,31 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Dissolved Oxygen',
+                              'Ammonia',
                               style: TextStyle(
                                   fontSize: 16
                               ),
                             ),
                             SizedBox(height: 4,),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'All Good!',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        color: Color(0xFF23286B)
-                                    ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'All Good!',
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: Color(0xFF23286B)
                                   ),
-                                  Icon(
-                                    Icons.chevron_right,
-                                    size: 6.67,
-                                    color: Color(0xFF23286B),
-                                  )
-                                ],
-                              ),
+                                ),
+                                Icon(
+                                  Icons.chevron_right,
+                                  size: 6.67,
+                                  color: Color(0xFF23286B),
+                                )
+                              ],
                             )
                           ],
                         ),
@@ -386,33 +435,31 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Dissolved Oxygen',
+                              'Nitrite',
                               style: TextStyle(
                                   fontSize: 16
                               ),
                             ),
                             SizedBox(height: 4,),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'All Good!',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        color: Color(0xFF23286B)
-                                    ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'All Good!',
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: Color(0xFF23286B)
                                   ),
-                                  Icon(
-                                    Icons.chevron_right,
-                                    size: 6.67,
-                                    color: Color(0xFF23286B),
-                                  )
-                                ],
-                              ),
+                                ),
+                                Icon(
+                                  Icons.chevron_right,
+                                  size: 6.67,
+                                  color: Color(0xFF23286B),
+                                )
+                              ],
                             )
                           ],
                         ),
@@ -431,33 +478,31 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Dissolved Oxygen',
+                              'pH',
                               style: TextStyle(
                                   fontSize: 16
                               ),
                             ),
                             SizedBox(height: 4,),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'All Good!',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        color: Color(0xFF23286B)
-                                    ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'All Good!',
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: Color(0xFF23286B)
                                   ),
-                                  Icon(
-                                    Icons.chevron_right,
-                                    size: 6.67,
-                                    color: Color(0xFF23286B),
-                                  )
-                                ],
-                              ),
+                                ),
+                                Icon(
+                                  Icons.chevron_right,
+                                  size: 6.67,
+                                  color: Color(0xFF23286B),
+                                )
+                              ],
                             )
                           ],
                         ),
@@ -476,78 +521,31 @@ class _HomePageState extends State<HomePage> {
                       child: Padding(
                         padding: const EdgeInsets.all(16.0),
                         child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Dissolved Oxygen',
+                              'Temperature',
                               style: TextStyle(
                                   fontSize: 16
                               ),
                             ),
                             SizedBox(height: 4,),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'All Good!',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        color: Color(0xFF23286B)
-                                    ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  'All Good!',
+                                  style: TextStyle(
+                                      fontSize: 12,
+                                      color: Color(0xFF23286B)
                                   ),
-                                  Icon(
-                                    Icons.chevron_right,
-                                    size: 6.67,
-                                    color: Color(0xFF23286B),
-                                  )
-                                ],
-                              ),
-                            )
-                          ],
-                        ),
-                      ),
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.height / 10.41,
-                      width: MediaQuery.of(context).size.width / 2.30,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(5),
-                        border: Border.all(
-                          color: Color(0xFFD3EAFF),
-                          width: 0.5,
-                        ),
-                      ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(16.0),
-                        child: Column(
-                          children: [
-                            Text(
-                              'Dissolved Oxygen',
-                              style: TextStyle(
-                                  fontSize: 16
-                              ),
-                            ),
-                            SizedBox(height: 4,),
-                            Padding(
-                              padding: const EdgeInsets.symmetric(horizontal: 16),
-                              child: Row(
-                                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(
-                                    'All Good!',
-                                    style: TextStyle(
-                                        fontSize: 12,
-                                        color: Color(0xFF23286B)
-                                    ),
-                                  ),
-                                  Icon(
-                                    Icons.chevron_right,
-                                    size: 6.67,
-                                    color: Color(0xFF23286B),
-                                  )
-                                ],
-                              ),
+                                ),
+                                Icon(
+                                  Icons.chevron_right,
+                                  size: 6.67,
+                                  color: Color(0xFF23286B),
+                                )
+                              ],
                             )
                           ],
                         ),
@@ -558,7 +556,9 @@ class _HomePageState extends State<HomePage> {
                 SizedBox(height: 16,),
                 if(!isIssue) GestureDetector(
                   onTap: () {
-                    isIssue = true;
+                    setState(() {
+                      isIssue = true;
+                    });
                   },
                   child: Image.asset(
                     'assets/images/clip-end-of-quarantine-happy-and-joyful-girl-2.png',
@@ -567,22 +567,35 @@ class _HomePageState extends State<HomePage> {
                   ),
                 ),
                 SizedBox(height: 16,),
-                if(!isIssue) Row(
-                  children: [
-                    Icon(
-                      Icons.check_circle,
-                      color: Color(0xFF23286B),
-                      size: 14,
-                    ),
-                    SizedBox(width: 10,),
-                    Text(
-                      'No immediate action required',
-                      style: TextStyle(
-                        color: Color(0xFF23286B),
-                        fontSize: 14,
-                      ),
+                if(!isIssue) Container(
+                  width: MediaQuery.of(context).size.width / 1.09,
+                  height: MediaQuery.of(context).size.height / 18.45,
+                  padding: EdgeInsets.all(12),
+                  decoration: BoxDecoration(
+                    color: Color(0xFFF3F9FF),
+                    borderRadius: BorderRadius.circular(6),
+                    border: Border.all(
+                      color: Color(0xFFD3EAFF),
+                      width: 0.5,
                     )
-                  ],
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.check_circle,
+                        color: Color(0xFF23286B),
+                        size: 14,
+                      ),
+                      SizedBox(width: 10,),
+                      Text(
+                        'No immediate action required',
+                        style: TextStyle(
+                          color: Color(0xFF23286B),
+                          fontSize: 14,
+                        ),
+                      )
+                    ],
+                  ),
                 )
                 else Container(
                   width: MediaQuery.of(context).size.width / 1.09,
@@ -608,7 +621,7 @@ class _HomePageState extends State<HomePage> {
                           ),
                           SizedBox(width: 12,),
                           Text(
-                            'Dissolved oxygen found to be not good',
+                            'Dissolved oxygen is critically low',
                             style: TextStyle(
                               color: Color(0xFF970C0C),
                               fontSize: 14,
@@ -618,7 +631,7 @@ class _HomePageState extends State<HomePage> {
                       ),
                       SizedBox(height: 4,),
                       Text(
-                        'The solution in a smaller sentence in one line',
+                        'Turn on the aerator',
                         style: TextStyle(
                           color: Color(0xFF970C0C),
                           fontSize: 14
