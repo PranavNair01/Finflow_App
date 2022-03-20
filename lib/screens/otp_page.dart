@@ -9,14 +9,16 @@ import 'package:firebase_auth/firebase_auth.dart';
 
 class OTPPage extends StatefulWidget {
   static const String routeName = '/otp';
+  final String mobileNumber;
+
+  OTPPage({required this.mobileNumber});
 
   @override
   State<OTPPage> createState() => _OTPPageState();
 }
 
 String otp = '';
-String correctOtp = 'e-ZT3!3S"Eb?t*dF';
-bool canAuthenticate = false;
+String _verificationId = 'e-ZT3!3S"Eb?t*dF';
 
 class _OTPPageState extends State<OTPPage> {
   
@@ -47,6 +49,7 @@ class _OTPPageState extends State<OTPPage> {
   void initState() {
     // TODO: implement initState
     startTimer();
+    loginUser();
     super.initState();
   }
 
@@ -58,8 +61,6 @@ class _OTPPageState extends State<OTPPage> {
   
   @override
   Widget build(BuildContext context) {
-
-    // loginUser(context);
 
     return Scaffold(
       appBar: AppBar(
@@ -128,12 +129,18 @@ class _OTPPageState extends State<OTPPage> {
                   width: double.infinity,
                   height: MediaQuery.of(context).size.height / 18.45,
                   child: ElevatedButton(
-                    onPressed: () {
+                    onPressed: () async{
+                      print('in button: ' + _verificationId);
                       if(otp.length != 6){
                         ScaffoldMessenger.of(context).showSnackBar(showSnackBar(context, 'Please enter a 6 digit code'));
                       }
-                      else if(true){
-                        Navigator.pushNamed(context, HomePage.routeName);
+                      else{
+                        PhoneAuthCredential credential = PhoneAuthProvider.credential(verificationId: _verificationId, smsCode: otp);
+                        await FirebaseAuth.instance.signInWithCredential(credential).then((value) {
+                          Navigator.pushNamed(context, HomePage.routeName);
+                        }).catchError((err) {
+                          print('ERROR: ' + err);
+                        });
                       }
                     },
                     child: Text(
@@ -151,7 +158,7 @@ class _OTPPageState extends State<OTPPage> {
                     ),
                     children: [
                       TextSpan(
-                        text: '+91 ' + mobileNumber,
+                        text: mobileNumber, //mobileNumber.substring(0, 3) + ' ' + mobileNumber.substring(3),
                         style: TextStyle(
                           fontSize: 14,
                           color: Colors.black
@@ -217,19 +224,19 @@ class _OTPPageState extends State<OTPPage> {
 }
 
 // Function to sign in users using mobile number
-Future<void> loginUser(BuildContext context) async{
+Future<void> loginUser() async{
   FirebaseAuth auth = FirebaseAuth.instance;
 
   await auth.verifyPhoneNumber(
-    phoneNumber: '+91 ' + mobileNumber,
+    phoneNumber: mobileNumber,
     timeout: Duration(seconds: 120),
     // Called when auto detects OTP and is successful
     verificationCompleted: (PhoneAuthCredential credential) async{
-      await auth.signInWithCredential(credential).then((value) async{
-        Navigator.pushNamed(context, HomePage.routeName);
-      }).catchError((err) {
-        print(err.toString());
-      });
+      // await auth.signInWithCredential(credential).then((value) async{
+      //   Navigator.pushNamed(context, HomePage.routeName);
+      // }).catchError((err) {
+      //   print(err.toString());
+      // });
     },
     // Called when error
     verificationFailed: (FirebaseAuthException authException){
@@ -237,15 +244,14 @@ Future<void> loginUser(BuildContext context) async{
     },
     // Called when OTP Code is sent to mobile number
     codeSent: (String verificationId, int? resendToken) async{
-      canAuthenticate = true;
-      correctOtp = verificationId;
+      _verificationId = verificationId;
+      print('In callback function: ' + _verificationId);
     },
     // Called when OTP expires due to timeout
     codeAutoRetrievalTimeout: (String verificationId){
       if(auth.currentUser!.uid.isNotEmpty) {
         print(verificationId);
         print("Timeout");
-        canAuthenticate = false;
       }
     },
   );

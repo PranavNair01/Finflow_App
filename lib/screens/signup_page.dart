@@ -74,7 +74,7 @@ class _SignUpPageState extends State<SignUpPage> {
                       border: InputBorder.none
                     ),
                     onChanged: (val) {
-                      mobileNumber = val;
+                      mobileNumber = '+91 ' + val;
                       print(mobileNumber);
                     },
                     keyboardType: TextInputType.phone,
@@ -87,11 +87,11 @@ class _SignUpPageState extends State<SignUpPage> {
                   height: MediaQuery.of(context).size.height / 18.45,
                   child: ElevatedButton(
                     onPressed: () {
-                      if(mobileNumber.length != 10){
+                      if(mobileNumber.length != 14){
                         ScaffoldMessenger.of(context).showSnackBar(showSnackBar(context, 'Please enter a valid 10 digit mobile number'));
                       }
                       else{
-                        Navigator.pushNamed(context, OTPPage.routeName);
+                        Navigator.push(context, MaterialPageRoute(builder: (context) => OTPPage(mobileNumber: mobileNumber)));
                       }
                     },
                     child: Text(

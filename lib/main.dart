@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         SignUpPage.routeName: (context) => SignUpPage(),
-        OTPPage.routeName: (context) => OTPPage(),
+        // OTPPage.routeName: (context) => OTPPage(),
         HomePage.routeName: (context) => HomePage(),
       },
       home: SignUpPage(),
