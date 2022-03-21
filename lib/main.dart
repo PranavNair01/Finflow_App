@@ -3,12 +3,17 @@ import 'package:flutter/material.dart';
 import 'screens/signup_page.dart';
 import 'screens/otp_page.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+  mobileNumber = prefs.getString('mobile');
   runApp(const MyApp());
 }
+
+dynamic mobileNumber = null;
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -51,7 +56,7 @@ class MyApp extends StatelessWidget {
         // OTPPage.routeName: (context) => OTPPage(),
         HomePage.routeName: (context) => HomePage(),
       },
-      home: SignUpPage(),
+      home: (mobileNumber == null) ? SignUpPage() : HomePage(),
     );
   }
 }

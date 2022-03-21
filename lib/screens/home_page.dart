@@ -1,5 +1,9 @@
+import 'package:finflow/screens/signup_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class HomePage extends StatefulWidget {
   static const String routeName = '/home';
@@ -11,6 +15,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   bool isIssue = true;
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    getData();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -31,6 +42,20 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         leadingWidth: 64,
+        actions: [
+          IconButton(
+            onPressed: () async{
+              SharedPreferences prefs = await SharedPreferences.getInstance();
+              prefs.clear();
+              await FirebaseAuth.instance.signOut();
+              Navigator.popAndPushNamed(context, SignUpPage.routeName);
+            },
+            icon: Icon(
+              Icons.power_settings_new_rounded,
+              color: Color(0xFF23286B),
+            ),
+          )
+        ],
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -647,4 +672,13 @@ class _HomePageState extends State<HomePage> {
       ),
     );
   }
+
+  Future<void> getData() async{
+    DatabaseReference ref = FirebaseDatabase.instance.ref('ID1');
+    ref.onValue.listen((DatabaseEvent event) {
+      final data = event.snapshot.value;
+      print(data);
+    });
+  }
 }
+

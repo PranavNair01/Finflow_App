@@ -6,6 +6,7 @@ import 'package:finflow/utils/snackbar_message.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class OTPPage extends StatefulWidget {
   static const String routeName = '/otp';
@@ -137,7 +138,9 @@ class _OTPPageState extends State<OTPPage> {
                       }
                       else{
                         PhoneAuthCredential credential = PhoneAuthProvider.credential(verificationId: _verificationId, smsCode: otp);
-                        await FirebaseAuth.instance.signInWithCredential(credential).then((value) {
+                        await FirebaseAuth.instance.signInWithCredential(credential).then((value) async{
+                          SharedPreferences prefs = await SharedPreferences.getInstance();
+                          prefs.setString('mobile', this.widget.mobileNumber);
                           Navigator.pushNamed(context, HomePage.routeName);
                         }).catchError((err) {
                           print('ERROR: ' + err);
