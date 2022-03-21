@@ -19,6 +19,7 @@ class OTPPage extends StatefulWidget {
 
 String otp = '';
 String _verificationId = 'e-ZT3!3S"Eb?t*dF';
+int? _resendToken;
 
 class _OTPPageState extends State<OTPPage> {
   
@@ -49,7 +50,7 @@ class _OTPPageState extends State<OTPPage> {
   void initState() {
     // TODO: implement initState
     startTimer();
-    loginUser();
+    loginUser(this.widget.mobileNumber);
     super.initState();
   }
 
@@ -177,7 +178,7 @@ class _OTPPageState extends State<OTPPage> {
                           setState(() {
                             _start = 120;
                             isEnabled = false;
-                            // loginUser(context);
+                            loginUser(this.widget.mobileNumber);
                           });
                         }
                       },
@@ -224,7 +225,7 @@ class _OTPPageState extends State<OTPPage> {
 }
 
 // Function to sign in users using mobile number
-Future<void> loginUser() async{
+Future<void> loginUser(String mobileNumber) async{
   FirebaseAuth auth = FirebaseAuth.instance;
 
   await auth.verifyPhoneNumber(
@@ -245,6 +246,7 @@ Future<void> loginUser() async{
     // Called when OTP Code is sent to mobile number
     codeSent: (String verificationId, int? resendToken) async{
       _verificationId = verificationId;
+      _resendToken = resendToken;
       print('In callback function: ' + _verificationId);
     },
     // Called when OTP expires due to timeout
@@ -254,5 +256,6 @@ Future<void> loginUser() async{
         print("Timeout");
       }
     },
+    forceResendingToken: _resendToken
   );
 }
